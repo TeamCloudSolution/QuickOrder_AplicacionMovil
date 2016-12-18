@@ -1,0 +1,13 @@
+<ion-view view-title="CATEGORIA DE PRODUCTOS">
+  <ion-content>
+    <div class="list">
+
+      <a id='cat-{{cat.id}}' class="item categorias" ui-sref="productos({ p_categoriaId: cat.id })" ng-repeat="cat in categorias">
+        <img src="img/bambi.png">
+        <p>{{cat.nombre}}</p>
+      </a>
+
+    </div>
+
+  </ion-content>
+</ion-view>

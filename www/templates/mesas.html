@@ -1,0 +1,17 @@
+<ion-view view-title="SELECCIONE UNA MESA">
+  <ion-content>
+    <!-- {{msjerror}} -->
+
+    <div class="list mesaimg" style="background: url('img/mesa.jpg');  height: 460px;">
+
+      <a class="item flotante" ui-sref="productos({p_mesaId:mesa.id, p_categoriaId:1})" ng-repeat="mesa in mesas">
+        {{mesa.numero}}
+      </a>
+
+    </div>
+
+    <button class="button button-block button-dark" ui-sref="promociones">Ver Promociones</button>
+
+  </ion-content>
+</ion-view>
+|

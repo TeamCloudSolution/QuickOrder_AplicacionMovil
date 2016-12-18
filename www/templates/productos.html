@@ -1,0 +1,22 @@
+<ion-view view-title="PRODUCTOS">
+  <ion-content>
+    <!--button class="button button-block button-positive" ui-sref="categorias">Ir Categorias</button-->
+
+    <div class="list list-product">
+
+      <a class="productos item item-thumbnail-left" ui-sref="productodetalle({ p_categoriaId: categoriaId, p_productoId: producto.id })" ng-repeat="producto in productos">
+        <img src="{{producto.imagen}}">
+        <p>{{producto.nombre}}</p>
+      </a>
+    </div>
+    <button class="button button-block button-dark" ui-sref="detallepedido">Finalizar pedido</button>
+    <div class="list">
+
+      <a id='cat-{{cat.id}}' class="item categorias" ui-sref="productos({ p_categoriaId: cat.id })" ng-repeat="cat in categorias">
+        <img src="img/{{cat.id}}.jpg">
+        <p>{{cat.nombre}}</p>
+      </a>
+
+    </div>
+  </ion-content>
+</ion-view>

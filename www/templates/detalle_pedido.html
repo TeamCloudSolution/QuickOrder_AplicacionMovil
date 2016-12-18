@@ -1,0 +1,68 @@
+<ion-view view-title="DETALLE PEDIDO">
+  <ion-content>
+
+    <div class="list">
+      <label class="item item-input">
+        <b><span class="input-label">MESA:</span></b>
+        <input type="text" ng-model="mesa">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Ingrese NIT" ng-model="nit" >
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Ingrese razon social" ng-model="razonSocial" >
+      </label>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <b>PRODUCTO</b>
+      </div>
+      <div class="col">
+        <b>CANTIDAD</b>
+      </div>
+      <div class="col">
+        <b>PRECIO</b>
+      </div>
+      <div class="col">
+        <b>TOTAL</b>
+      </div>
+    </div>
+
+    <div class="row" ng-repeat="producto in productos">
+      <div class="col">
+        {{producto.nombre}}
+      </div>
+      <div class="col">
+        {{producto.cantidad}}
+      </div>
+      <div class="col">
+        {{producto.precio}}
+      </div>
+      <div class="col">
+        {{producto.cantidad * producto.precio}}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+      </div>
+      <div class="col assertive">
+        <b>TOTAL: {{total}}</b>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <button class="button button-block button-dark" ng-click="confirmar(nit, razonSocial)" ui-sref="mesas">Confirmar</button>
+      </div>
+      <div class="col">
+        <button class="button button-block button-assertive" ng-click="cancelar()" ui-sref="mesas">Cancelar</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
